@@ -7,6 +7,7 @@ dart_find_package(OpenGL)
 dart_check_optional_package(OPENGL "dart-gui" "OpenGL")
 
 if(WIN32 AND NOT CYGWIN)
+  dart_check_optional_package(GLUT "dart-gui" "freeglut")
   set(GLUT_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/include")
   set(GLUT_LIBRARIES glut32)
   set(HAVE_GLUT TRUE)
